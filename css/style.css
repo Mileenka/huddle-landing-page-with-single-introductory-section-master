@@ -183,7 +183,7 @@ body footer .attribution a {
   }
   body main img {
     margin-top: initial;
-    width: 55%;
+    width: min(55%, 700px);
     margin: auto 0;
   }
   body main .switch section {

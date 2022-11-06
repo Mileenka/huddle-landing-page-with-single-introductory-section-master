@@ -1,0 +1,251 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  background: url("../images/bg-mobile.svg") top/cover;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: hsl(257deg, 40%, 49%);
+}
+body header {
+  width: 100%;
+}
+body header img {
+  min-width: 10rem;
+  width: min(20rem, 42%);
+}
+body a {
+  text-decoration: none;
+}
+body main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main img {
+  width: min(100%, 56.5rem);
+  margin-top: 5.8rem;
+}
+body main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5.2rem;
+}
+body main section h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 3.7rem;
+}
+body main section .description {
+  width: min(100%, 600px);
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+body main section .register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 22rem;
+  height: 4.5rem;
+  background-color: white;
+  font-size: 1.5rem;
+  color: hsl(257deg, 40%, 49%);
+  border-radius: 4rem;
+  box-shadow: 3px 7px 23px -9px rgb(29, 16, 35);
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+body footer .social-media {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 13rem;
+  color: white;
+}
+body footer .social-media .social-icon {
+  width: 3rem;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+}
+body footer .attribution {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+body footer .attribution a {
+  color: hsl(300deg, 69%, 71%);
+}
+
+@media all and (min-width: 1000px) {
+  body {
+    position: relative;
+    padding: 2rem;
+    background: url("../images/bg-desktop.svg") top left no-repeat;
+    background-size: auto 100vh;
+    background-color: hsl(257deg, 40%, 49%);
+  }
+  body main {
+    position: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    margin-top: 8.7rem;
+    margin-left: 3rem;
+    width: 90%;
+  }
+  body main img {
+    margin-top: initial;
+    width: 50%;
+    margin: auto 0;
+  }
+  body main .switch section {
+    align-items: flex-start;
+    margin-top: 4.5rem;
+    margin-left: 6rem;
+  }
+  body main .switch section h1 {
+    max-width: 45rem;
+    min-width: 33.5rem;
+    font-size: 3.9rem;
+    font-weight: 500;
+    text-align: initial;
+    line-height: 5.5rem;
+  }
+  body main .switch section .description {
+    max-width: 52rem;
+    text-align: initial;
+    font-size: 1.7rem;
+  }
+  body main .switch section .register {
+    height: 5.5rem;
+    width: 20rem;
+    font-size: 1.9rem;
+    transition: background-color 0.6s linear;
+  }
+  body main .switch section .register:hover {
+    cursor: pointer;
+    background-color: hsl(300deg, 69%, 71%);
+    color: white;
+  }
+  body main .switch footer {
+    position: absolute;
+    right: 5rem;
+    bottom: 3.5rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: max-content;
+    width: 45rem;
+  }
+  body main .switch footer .social-media {
+    width: 15rem;
+  }
+  body main .switch footer .social-media .social-icon {
+    width: 3.3rem;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    transition: 0.5s linear;
+  }
+  body main .switch footer .social-media .social-icon:hover, body main .switch footer .social-media .social-icon:focus {
+    border-color: hsl(300deg, 69%, 71%);
+    color: hsl(300deg, 69%, 71%);
+  }
+  body main .switch footer .attribution > a {
+    transition: color 0.5s linear;
+  }
+  body main .switch footer .attribution > a:hover {
+    color: pink;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

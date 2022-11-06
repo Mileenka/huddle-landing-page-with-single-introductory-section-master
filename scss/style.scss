@@ -1,0 +1,197 @@
+@use "reset" as *;
+@use "variables" as *;
+@use "mixin" as *;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2.8rem;
+  font-family: $body;
+  font-size: 1.8rem;
+  color: white;
+  background: url("../images/bg-mobile.svg") top/cover;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: $Violet;
+
+  header {
+    width: 100%;
+
+    img {
+      min-width: 10rem;
+      width: min(20rem, 42%);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: min(100%, 56.5rem);
+      margin-top: 5.8rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5.2rem;
+
+      h1 {
+        font-family: $headings;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 3.7rem;
+      }
+
+      .description {
+        width: min(100%, 600px);
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 2.5rem;
+        letter-spacing: 0.05rem;
+      }
+
+      .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        width: 22rem;
+        height: 4.5rem;
+        background-color: white;
+        font-size: 1.5rem;
+        color: $Violet;
+        border-radius: 4rem;
+        box-shadow: 3px 7px 23px -9px rgb(29, 16, 35);
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    .social-media {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      width: 13rem;
+      color: white;
+
+      .social-icon {
+        @include icons;
+      }
+    }
+
+    .attribution {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+
+      a {
+        color: $SoftMagenta;
+      }
+    }
+  }
+}
+
+@media all and(min-width: 1000px) {
+  body {
+    position: relative;
+    padding: 2rem;
+    background: url("../images/bg-desktop.svg") top left no-repeat;
+    background-size: auto 100vh;
+    background-color: $Violet;
+    main {
+      position: initial;
+      display: flex;
+      flex-direction: row;
+      align-items: initial;
+      margin-top: 8.7rem;
+      margin-left: 3rem;
+      width: 90%;
+      img {
+        margin-top: initial;
+        width: 50%;
+        margin: auto 0;
+      }
+      .switch {
+        section {
+          align-items: flex-start;
+          margin-top: 4.5rem;
+          margin-left: 6rem;
+          h1 {
+            max-width: 45rem;
+            min-width: 33.5rem;
+            font-size: 3.9rem;
+            font-weight: 500;
+            text-align: initial;
+            line-height: 5.5rem;
+          }
+          .description {
+            max-width: 52rem;
+            text-align: initial;
+            font-size: 1.7rem;
+          }
+          .register {
+            height: 5.5rem;
+            width: 20rem;
+            font-size: 1.9rem;
+            transition: background-color 0.6s linear;
+            &:hover {
+              cursor: pointer;
+              background-color: $SoftMagenta;
+              color: white;
+            }
+          }
+        }
+        footer {
+          position: absolute;
+          right: 5rem;
+          bottom: 3.5rem;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          height: max-content;
+          width: 45rem;
+          .social-media {
+            width: 15rem;
+            .social-icon {
+              @include icons(3.3rem, 1.6rem, 0.8rem);
+              transition: 0.5s linear;
+              &:hover,
+              &:focus {
+                border-color: $SoftMagenta;
+                color: $SoftMagenta;
+              }
+            }
+          }
+          .attribution > a {
+            transition: color 0.5s linear;
+            &:hover {
+              color: pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

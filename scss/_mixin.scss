@@ -1,0 +1,9 @@
+@mixin icons($width: 3rem, $fs: 1.5rem, $pad: 0.6rem) {
+    width: $width;
+    padding: $pad;
+    font-size: $fs;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}

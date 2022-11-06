@@ -78,7 +78,7 @@ body {
   background-color: hsl(257deg, 40%, 49%);
 }
 body header {
-  width: 100%;
+  width: min(100%, 1440px);
 }
 body header img {
   min-width: 10rem;
@@ -178,7 +178,7 @@ body footer .attribution a {
     align-items: initial;
     margin-top: 8.7rem;
     margin-left: 3rem;
-    width: 90%;
+    width: min(90%, 1440px);
     padding-top: 3rem;
   }
   body main img {

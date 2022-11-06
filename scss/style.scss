@@ -22,7 +22,7 @@ body {
   background-color: $Violet;
 
   header {
-    width: 100%;
+    width: min(100%, 1440px);
 
     img {
       min-width: 10rem;
@@ -128,7 +128,7 @@ body {
       align-items: initial;
       margin-top: 8.7rem;
       margin-left: 3rem;
-      width: 90%;
+      width: min(90%, 1440px);
       padding-top: 3rem;
       img {
         margin-top: initial;
